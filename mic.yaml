@@ -1,11 +1,11 @@
-step: 2
-name: gn1
-docker_image: gn1:latest
+step: 1
+name: gn2
+docker_image: gn2:latest
 framework: !!python/object/apply:mic.constants.Framework
 - !!python/tuple
   - general
   - mintproject/generic:latest
-container_name: gn1_783e1e24
+container_name: gn2_ea27c1b7
 parameters:
   snowfalltemp:
     name: snowfalltemp
@@ -67,3 +67,6 @@ outputs:
   fin_fin:
     path: inputs/fin.fin
     format: fin
+github_repo_url: https://github.com/fuchsiger/gn1.git
+version: 20.12.1
+mint_component_url: https://raw.githubusercontent.com/fuchsiger/gn1/master/mint_component.zip
