@@ -1,0 +1,69 @@
+step: 2
+name: gn1
+docker_image: gn1:latest
+framework: !!python/object/apply:mic.constants.Framework
+- !!python/tuple
+  - general
+  - mintproject/generic:latest
+container_name: gn1_783e1e24
+parameters:
+  snowfalltemp:
+    name: snowfalltemp
+    default_value: 1.5
+    type: float
+    description: ''
+configs:
+  basins_bsn:
+    path: inputs/basins.bsn
+    format: bsn
+inputs:
+  inputs_zip:
+    path: inputs.zip
+    format: zip
+code_files:
+  swat670:
+    path: inputs/swat670
+    format: ''
+outputs:
+  output_sed:
+    path: inputs/output.sed
+    format: sed
+  output_sub:
+    path: inputs/output.sub
+    format: sub
+  output_std:
+    path: inputs/output.std
+    format: std
+  chan_deg:
+    path: inputs/chan.deg
+    format: deg
+  bmp-sedfil_out:
+    path: inputs/bmp-sedfil.out
+    format: out
+  output_rch:
+    path: inputs/output.rch
+    format: rch
+  watout_dat:
+    path: inputs/watout.dat
+    format: dat
+  output_rsv:
+    path: inputs/output.rsv
+    format: rsv
+  output_hru:
+    path: inputs/output.hru
+    format: hru
+  septic_out:
+    path: inputs/septic.out
+    format: out
+  hyd_out:
+    path: inputs/hyd.out
+    format: out
+  bmp-ri_out:
+    path: inputs/bmp-ri.out
+    format: out
+  input_std:
+    path: inputs/input.std
+    format: std
+  fin_fin:
+    path: inputs/fin.fin
+    format: fin
